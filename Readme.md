@@ -1,105 +1,101 @@
-Gestión de Pacientes
-Este proyecto es una aplicación de escritorio desarrollada en Python que permite gestionar información de pacientes, incluyendo datos personales, diagnósticos, evolución, tratamiento y archivos asociados (fotos, videos y PDFs). Los datos se almacenan en una base de datos SQLite y los archivos se organizan en carpetas específicas dentro del directorio del usuario.
+Patient Management
+This project is a desktop application developed in Python that allows users to manage patient information, including personal details, diagnoses, progress, treatments, and associated files (photos, videos, and PDFs). Data is stored in a SQLite database, and files are organized into specific folders within the user's directory.
 
-Características
-Gestión completa de pacientes:
+Features
+Comprehensive Patient Management:
+Add new patients.
 
-Agregar nuevos pacientes.
+Search for patients by name and surname.
 
-Buscar pacientes por nombre y apellido.
+Update existing information.
 
-Modificar información existente.
+Delete patients from the system.
 
-Eliminar pacientes del sistema.
+File Organization:
+Associate photos, videos, and PDF documents with each patient.
 
-Organización de archivos:
+Automatically copy files to specific folders within the user's directory.
 
-Posibilidad de asociar fotos, videos y documentos PDF a cada paciente.
+Graphical Interface:
+Intuitive interface built with tkinter, featuring forms for each functionality.
 
-Copia automática de archivos a carpetas específicas dentro del directorio del usuario.
+Local Database:
+Uses SQLite to store patient information securely.
 
-Interfaz gráfica:
+System Requirements
+Python 3.8 or higher.
 
-Interfaz intuitiva creada con tkinter, con formularios para cada funcionalidad.
+Required libraries:
 
-Base de datos local:
+tkinter (default in Python).
 
-Uso de SQLite para almacenar la información de los pacientes.
+sqlite3 (default in Python).
 
-Requisitos del sistema
-Python 3.8 o superior.
+shutil (default in Python).
 
-Bibliotecas necesarias:
+Installation
+Clone this repository or download the project files.
 
-tkinter (incluida por defecto en Python).
+Ensure Python is installed on your system.
 
-sqlite3 (incluida por defecto en Python).
-
-shutil (incluida por defecto en Python).
-
-Instalación
-Clona este repositorio o descarga los archivos del proyecto.
-
-Asegúrate de tener Python instalado en tu sistema.
-
-Ejecuta el archivo principal:
+Run the main file:
 
 bash
 python main.py
-Estructura del proyecto
-Archivo	Descripción
-main.py	Archivo principal que inicia la aplicación y gestiona el flujo general.
-forms.py	Contiene las ventanas y formularios para las diferentes acciones (agregar, buscar, modificar, etc.).
-database.py	Lógica para interactuar con la base de datos SQLite (crear, leer, actualizar y eliminar registros).
-utils.py	Funciones auxiliares para gestionar archivos asociados a los pacientes.
-Cómo usar
-Ejecuta el programa con:
+Project Structure
+File	Description
+main.py	Main file that starts the application and manages the overall workflow.
+forms.py	Contains windows and forms for actions like adding, searching, and editing.
+database.py	Logic for interacting with the SQLite database (create, read, update, delete).
+utils.py	Auxiliary functions for managing files associated with patients.
+How to Use
+Run the program:
 
 bash
 python main.py
-Selecciona la acción que deseas realizar desde el menú principal:
+Choose an action from the main menu:
 
-Agregar Paciente: Completa el formulario con los datos del paciente y selecciona los archivos asociados (opcional).
+Add Patient: Fill out the form with patient details and optionally select associated files.
 
-Buscar Paciente: Ingresa el nombre y apellido del paciente para ver su información completa.
+Search Patient: Enter the patient's name and surname to view their complete information.
 
-Modificar Paciente: Busca un paciente y actualiza su información o gestiona sus archivos asociados.
+Edit Patient: Search for a patient and update their details or manage their associated files.
 
-Eliminar Paciente: Busca un paciente y elimínalo del sistema.
+Delete Patient: Search for a patient and remove them from the system.
 
-Los datos se guardarán automáticamente en la base de datos local y los archivos se copiarán a carpetas organizadas dentro del directorio "Mis Documentos".
+Data will be automatically saved in the local database, and associated files will be copied to organized folders within the "Documents" directory.
 
-Notas técnicas
-1. Base de datos (database.py)
-La base de datos SQLite se crea automáticamente en la carpeta "Documents/GestionPacientes". Contiene una tabla llamada pacientes con los siguientes campos:
+Technical Notes
+1. Database (database.py)
+The SQLite database is created automatically in the "Documents/GestionPacientes" folder. It includes a table called patients with fields such as:
 
-id: Identificador único.
+id: Unique identifier.
 
-nombre: Nombre del paciente.
+name: Patient's first name.
 
-apellido: Apellido del paciente.
+surname: Patient's last name.
 
-edad, telefono, email: Información personal.
+age, phone, email: Personal information.
 
-diagnostico, evolucion, tratamiento: Información médica.
+diagnosis, progress, treatment: Medical information.
 
-fotos, videos, pdfs: Rutas a los archivos asociados.
+photos, videos, pdfs: Paths to associated files.
 
-2. Gestión de archivos (utils.py)
-Los archivos asociados a cada paciente (fotos, videos, PDFs) se copian automáticamente a una carpeta específica dentro de "Documents/GestionPacientes/archivos_pacientes". Esto asegura que todos los archivos estén organizados y accesibles.
+2. File Management (utils.py)
+Associated files (photos, videos, PDFs) are automatically copied to a specific folder under "Documents/GestionPacientes/archivos_pacientes". This ensures all files are well-organized and easily accessible.
 
-Contribución
-Si deseas mejorar este proyecto:
+Contribution
+If you want to improve this project:
 
-Haz un fork del repositorio.
+Fork this repository.
 
-Crea una nueva rama:
+Create a new branch:
 
 bash
-git checkout -b feature/nueva-funcionalidad
-Realiza tus cambios y envía un pull request.
+git checkout -b feature/new-feature
+Make your changes and submit a pull request.
 
-Autor
-Este programa fue desarrollado, por Edelan, como una solución para gestionar información médica y organizar archivos relacionados con pacientes.
+Author
+This program was developed by Edelan as a solution for managing medical information and organizing patient-related files.
 
-¡Gracias por usar este programa! 😊
+Thank you for using this application! 😊
